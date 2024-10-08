@@ -1,0 +1,31 @@
+<script type="text/discourse-plugin" version="0.8">
+  
+const decorateLines = (post) => {
+  try {
+    // Combinations of 'number', 'wrap', 'scroll' and/or 'shadow'
+    const classes = ['decorator', 'number', 'scroll', 'shadow'].map(c => `lines-${c}`);
+
+    const split = /^(.*)$/mg;
+    const elems = post.querySelectorAll('pre code:not(.lines-decorator)');
+    elems.forEach(elem => {
+      const count = elem.innerHTML.trim().match(split).length;
+
+      // Discourse uses `<aside>` for quotes of other forum posts
+      const quote = elem.closest('aside') ? ['lines-in-quote'] : []
+
+      elem.parentElement.classList.add(`lines-count-${count}`, ...classes, ...quote);
+      elem.classList.add(`lines-count-${count}`, ...classes, ...quote);
+      const lineClass = ['lines-line', ...quote].join(' ');
+
+      // Assume we don't have any event listeners on the line,
+      // and trim to hide trailing blank lines
+      elem.innerHTML = elem.innerHTML.trim().replace(/^(.*)$/mg, `<span class="${lineClass}">$1</span>`);
+    });
+  } catch (e) {
+    console.error(e);
+  }
+}
+
+api.decorateCookedElement(decorateLines, {id: 'decorate-pre-code-lines'});
+  
+</script>
