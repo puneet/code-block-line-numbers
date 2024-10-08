@@ -2,7 +2,7 @@
   "name": "Discourse Codeblock Line Numbers",
   "component": true,
   "about_url": "https://github.com/Lillinator/discourse-codeblock-line-numbers/blob/main/README.md",
-  "license_url": "https://github.com/Lillinator/discourse-codeblock-line-numbers/blob/main/LICENSE",
+  "license_url": "https://github.com/Lillinator/discourse-code-block-line-numbers/blob/main/LICENSE",
   "authors": "@Lilly",
   "theme_version": "0.0.1"
 }
