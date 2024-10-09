@@ -1,5 +1,5 @@
 # Discourse code-block line numbers
-Adds automatic line numbers to code blocks in Discourse. Inline code or blocks of 1 line are not affected.
+Adds automatic line numbers to code blocks in Discourse, for blocks of two or more lines. Inline code or blocks of 1 line are not affected. 
 
 ie:
 
