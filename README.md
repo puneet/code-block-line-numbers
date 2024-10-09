@@ -4,8 +4,8 @@ Adds automatic line numbers to code blocks in Discourse. Inline code blocks are 
 ie:
 
 ```
-this code will
-have line numbers
+1 this code will
+2 have line numbers
 ```
 
 `this code will not`
