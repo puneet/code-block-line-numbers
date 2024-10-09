@@ -1,5 +1,5 @@
 # Discourse code-block line numbers
-Adds automatic line numbers to code blocks in Discourse. Inline code blocks are not affected, only triple-backtick blocks.
+Adds automatic line numbers to code blocks in Discourse. Inline code or blocks of 1 line are not affected.
 
 ie:
 
@@ -8,4 +8,8 @@ ie:
 2 have line numbers
 ```
 
-`this code will not`
+```
+ths code will not
+```
+
+`and neither will this code`
