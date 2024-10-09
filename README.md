@@ -1,2 +1,2 @@
-# Discourse Code-block-line-numbers
+# Discourse code-block-line-numbers
 Add line numbers to code blocks in Discourse.
