@@ -86,3 +86,17 @@
         order:4;
     }
 }
+
+code{
+    &.lines-decorator{
+        padding: 0px;
+        &.lines-shadow{
+            background-image: linear-gradient(to right, var(--github) 25%, transparent), linear-gradient(to left, var(--github) 25%, transparent), linear-gradient(to right, var(--github), transparent), linear-gradient(to left, var(--github), transparent);
+        }
+        &.lines-number:not(.lines-count-1):not(.lines-in-quote) span.lines-line::before{
+            background-color: #263238;
+            color: rgba(233, 237, 237, 1);
+        }
+    }
+    
+}
