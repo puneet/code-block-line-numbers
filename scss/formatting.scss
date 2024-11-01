@@ -14,58 +14,7 @@
         color: black;
         order:1;
     }
-    &:after{
-        content:"";
-        width: 12px;
-        height: 12px;
-        display: inline-block;
-        border-radius: 15px;
-        margin-left: 2px;
-        border-width: 1px;
-        border-style: solid;
-        background: #EC6A5F;
-        border-color: #D04E42;
-        order:2;
-        position: absolute;
-        top: 10px;
-        left: 5px;
-    }
-    & .codeblock-button-wrapper{
-        right: .5rem !important;
-        top: .25em !important;
-        order:3;
-        width: 100%;
-        &:before{
-            content:"";
-            width: 12px;
-            height: 12px;
-            display: inline-block;
-            border-radius: 15px;
-            margin-left: 2px;
-            border-width: 1px;
-            border-style: solid;
-            background: #F5C04F;
-            border-color: #D6A13D;
-            position: absolute;
-            top: 6.5px;
-            left: 30px;
-        }
-        &:after{
-            content:"";
-            width: 12px;
-            height: 12px;
-            display: inline-block;
-            border-radius: 15px;
-            margin-left: 2px;
-            border-width: 1px;
-            border-style: solid;
-            background: #64CC57;
-            border-color: #4EA73B;
-            position: absolute;
-            top: 6.5px;
-            left: 48px;
-        }
-        & .btn.nohighlight{
+    & .btn.nohighlight{
             padding: .7em;
             float: right;
             &.copy-cmd{
@@ -80,8 +29,6 @@
                 opacity: 1;
                 visibility: visible;
             }
-        }
-    }
     & code{
         order:4;
     }
