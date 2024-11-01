@@ -1,7 +1,7 @@
 {
   "name": "Discourse Code Block Line Numbers",
   "component": true,
-  "about_url": "hhttps://meta.discourse.org/t/code-block-line-numbers/330130",
+  "about_url": "https://meta.discourse.org/t/code-block-line-numbers/330130",
   "license_url": "https://github.com/Lillinator/discourse-code-block-line-numbers/blob/main/LICENSE",
   "authors": "@Lilly",
   "theme_version": "0.0.2"
