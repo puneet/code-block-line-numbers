@@ -3,7 +3,7 @@
 const decorateLines = (post) => {
   try {
     // Combinations of 'number', 'wrap', 'scroll' and/or 'shadow'
-    const classes = ['decorator', 'number', 'wrap', 'scroll', 'shadow'].map(c => `lines-${c}`);
+    const classes = ['decorator', 'number', 'wrap', 'scroll'].map(c => `lines-${c}`);
 
     const split = /^(.*)$/mg;
     const elems = post.querySelectorAll('pre code:not(.lines-decorator)');
