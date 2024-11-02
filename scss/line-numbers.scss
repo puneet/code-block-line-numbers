@@ -4,8 +4,11 @@ pre.lines-decorator code.lines-decorator span.lines-line {
   }
 }
 
-pre.onebox code ol.lines {
-    margin: -30px;
+pre.onebox code ol {
+    line-height: 1em;
+      .lines {
+        margin: -30px;
+  }
 }
 
 pre.lines-decorator {
