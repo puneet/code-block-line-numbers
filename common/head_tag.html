@@ -9,6 +9,8 @@ const decorateLines = (post) => {
     const elems = post.querySelectorAll('pre code:not(.lines-decorator)');
     elems.forEach(elem => {
       const count = elem.innerHTML.trim().match(split).length;
+      // Discourse uses `<aside>` for quotes of other forum posts
+      const quote = elem.closest('aside') ? ['lines-in-quote'] : []
 
       elem.parentElement.classList.add(`lines-count-${count}`, ...classes, ...quote);
       elem.classList.add(`lines-count-${count}`, ...classes, ...quote);
