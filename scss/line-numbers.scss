@@ -96,7 +96,7 @@ code.lines-decorator {
     background-repeat: no-repeat;
   }
 
-  &.lines-number:not(.lines-count-1):not(.lines-in-quote) {
+  &.lines-number:not(.lines-count-1) {
     padding-left: 0;
     counter-reset: line-numbering;
 
