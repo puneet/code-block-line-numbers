@@ -10,12 +10,7 @@ const decorateLines = (post) => {
     elems.forEach(elem => {
       const count = elem.innerHTML.trim().match(split).length;
 
-      // Discourse uses `<aside>` for quotes of other forum posts
-      const quote = elem.closest('aside') ? ['lines-in-quote'] : []
 
-      elem.parentElement.classList.add(`lines-count-${count}`, ...classes, ...quote);
-      elem.classList.add(`lines-count-${count}`, ...classes, ...quote);
-      const lineClass = ['lines-line', ...quote].join(' ');
 
       // Assume we don't have any event listeners on the line,
       // and trim to hide trailing blank lines
