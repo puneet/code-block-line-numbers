@@ -7,15 +7,15 @@ pre.lines-decorator code.lines-decorator span.lines-line {
 pre.lines-decorator {
   --lines-bgcolor: var(--hljs-bg);
   --lines-number-width: 2em;
-  --lines-number-padding-to-right-border: .5em;
-  --lines-shadow-width: .8em;
-  --lines-shadow-color: rgba(0, 0, 0, .15);
+  --lines-number-padding-to-right-border: .6em;
+  //--lines-shadow-width: .8em;
+  //--lines-shadow-color: rgba(0, 0, 0, .15);
   // No padding for outer PRE:
   // - scrollbars not covering CODE but close to outermost edges
   // - text close to the edges when there is hidden content
   // - likewise for the shadows
-  padding: 0;
   // #f5f5f5 in `code.less`
+  padding: 0;
   background-color: var(--lines-bgcolor);
 }
 
