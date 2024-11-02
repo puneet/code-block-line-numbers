@@ -4,6 +4,10 @@ pre.lines-decorator code.lines-decorator span.lines-line {
   }
 }
 
+pre.onebox code ol.lines {
+    margin: -30px;
+}
+
 pre.lines-decorator {
   --lines-bgcolor: var(--hljs-bg);
   --lines-number-width: 2em;
