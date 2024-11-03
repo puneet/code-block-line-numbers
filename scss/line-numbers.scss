@@ -6,8 +6,8 @@ pre.lines-decorator code.lines-decorator span.lines-line {
 
 //--fix github onebox codeblocks
 pre.onebox code ol {
-   display: inline !important;
-   line-height: 0.6 !important;
+  display: inline !important;
+  line-height: 0.6 !important;
    //font-size: var(--font-down-1) !important;
 }
 //pre.onebox code ol.lines li:before {
@@ -15,9 +15,10 @@ pre.onebox code ol {
 //}
 
 pre.onebox code ol.lines li {
-    list-style-type: none !important;
-    font-size: var(--font-down-1);
-    align-content: center;
+  list-style-type: none !important;
+  font-size: var(--font-down-1);
+  align-content: center;
+  padding-left: 1em;
 }
 
 pre.onebox code ol.lines li:before {
