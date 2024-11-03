@@ -1,6 +1,8 @@
-pre.lines-decorator code.lines-decorator span.lines-line {
+pre :not(.onebox){
+  .lines-decorator code.lines-decorator span.lines-line {
   &::before {
     box-sizing: content-box;
+  }
   }
 }
 pre code {
@@ -25,10 +27,6 @@ pre.onebox code ol.lines li {
 
 pre.onebox code ol.lines li:before {
   display: inline;
-}
-
-span.lines-in-quote {
-  padding-left: 2em !important;
 }
 
 pre.lines-decorator {
@@ -137,7 +135,9 @@ code.lines-decorator {
       color: var(--primary-medium);
      // background-color: var(--lines-bgcolor);
     }
+    
     span.lines-in-quote {
+      padding-left: 2em !important;
       border-right: 0px !important;
     }
     span.lines-count-1 {
