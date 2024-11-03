@@ -1,0 +1,5 @@
+code-block_header_title:
+  - type: text
+  - default: "CODE"
+  - description:
+    - en: "Title text to show in header bar of code blocks.  Leave blank for none."
