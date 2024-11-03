@@ -1,8 +1,8 @@
-pre :not(.onebox){
+pre:not(.onebox) {
   .lines-decorator code.lines-decorator span.lines-line {
-  &::before {
-    box-sizing: content-box;
-  }
+    &::before {
+      box-sizing: content-box;
+    }
   }
 }
 pre code {
