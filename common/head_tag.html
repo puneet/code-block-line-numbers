@@ -5,7 +5,7 @@ const decorateLines = (post) => {
     const classes = ['decorator', 'number', 'wrap', 'scroll'].map(c => `lines-${c}`);
 
     const split = /^(.*)$/mg;
-    const elems = post.querySelectorAll('pre code:not(.lines-decorator)');
+    const elems = post.querySelectorAll('pre:not(.onebox) code:not(.lines-decorator)');
     elems.forEach(elem => {
       const count = elem.innerHTML.trim().match(split).length;
       const quote = elem.closest('aside') ? ['lines-in-quote'] : []
