@@ -3,3 +3,12 @@ code-block_header_title:
   default: "CODE"
   description:
     en: "Title text to show in header bar of code blocks.  Leave blank for none."
+
+code-block_text_size:
+  type: enum
+  default: ""
+  choices:
+   - "var(--font-down-1)"
+   - "var(--font-up-1)"
+   description:
+     en: "Set code block relative font sizing. Does not affect inline pre-formatted code."
