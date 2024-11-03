@@ -34,9 +34,9 @@
         order:2;
     }
 }
-//code{
-    //&.lines-decorator{
-       // padding: 0px;
+code{
+    &.lines-decorator{
+        padding: 0px;
         //&.lines-shadow{
         //    background-image: linear-gradient(to right, var(--github) 25%, transparent), linear-gradient(to left, var(--github) 25%, transparent), linear-gradient(to right, var(--github), transparent), linear-gradient(to left, var(--github), transparent);
         //}
@@ -44,6 +44,6 @@
         //    background-color: #263238;
         //    color: rgba(233, 237, 237, 1);
         //}
-    //}
+    }
     
-//}
+}
