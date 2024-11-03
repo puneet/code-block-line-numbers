@@ -131,7 +131,6 @@ code.lines-decorator {
       width: var(--lines-number-width);
       padding-right: var(--lines-number-padding-to-right-border);
       margin-right: .5em;
-      margin-left: .5em;
       height: 100%;
       text-align: right;
       font-family: var(--d-font-family--monospace);
@@ -139,7 +138,10 @@ code.lines-decorator {
      // background-color: var(--lines-bgcolor);
     }
     span.lines-in-quote {
-    border-right: 0px !important;
+      border-right: 0px !important;
+    }
+    span.lines-count-1 {
+      margin-left: .3em;
     }
   }
 }
