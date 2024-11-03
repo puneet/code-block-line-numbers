@@ -28,7 +28,6 @@ pre.lines-decorator {
 
 code.lines-decorator {
   padding: 1.5em;
-  font-family: var(--d-font-family--monospace);
 
   &.lines-wrap {
     white-space: pre-wrap;
@@ -118,7 +117,7 @@ code.lines-decorator {
       margin-right: .5em;
       height: 100%;
       text-align: right;
-      font-family: var(--font-family);
+      font-family: var(--d-font-family--monospace);
       color: var(--primary-medium);
      // background-color: var(--lines-bgcolor);
     }
