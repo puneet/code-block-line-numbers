@@ -8,24 +8,6 @@ pre code {
   font-size: #{$code-block_text_size}px;
 }
 //--fix github onebox codeblocks
-pre.onebox code ol {
-  display: inline !important;
-  line-height: 0.6 !important;
-   //font-size: var(--font-down-1) !important;
-}
-//pre.onebox code ol.lines li:before {
-//   display: none;
-//}
-
-pre.onebox code ol.lines li {
-  list-style-type: none !important;
-  align-content: center;
-  padding-left: 1em;
-}
-
-pre.onebox code ol.lines li:before {
-  display: inline;
-}
 
 pre.lines-decorator {
   --lines-bgcolor: var(--hljs-bg);
