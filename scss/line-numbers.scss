@@ -15,13 +15,13 @@ pre.onebox code ol {
 //}
 
 pre.onebox code ol.lines li {
-    list-style-type: auto !important;
+    list-style-type: none !important;
     font-size: var(--font-down-1);
     align-content: center;
 }
 
 pre.onebox code ol.lines li:before {
-  display: none;
+  display: inline;
 }
 
 span.lines-in-quote {
@@ -134,7 +134,7 @@ code.lines-decorator {
       color: var(--primary-medium);
      // background-color: var(--lines-bgcolor);
     }
-    span.lines-in-quote::before {
+    span.lines-in-quote {
     border-right: 0px !important;
     }
   }
