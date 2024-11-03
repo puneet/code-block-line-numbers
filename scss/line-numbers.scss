@@ -5,7 +5,7 @@ pre.lines-decorator code.lines-decorator span.lines-line {
 }
 pre code {
   background: var(--primary-very-low) !important;
-  font-size: 14px !important;
+  font-size: var(--font-down-1);
 }
 //--fix github onebox codeblocks
 pre.onebox code ol {
