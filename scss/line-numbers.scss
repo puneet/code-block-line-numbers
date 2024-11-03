@@ -4,6 +4,12 @@ pre.lines-decorator code.lines-decorator span.lines-line {
   }
 }
 
+//--fix github onebox codeblocks
+
+pre.onebox code ol {
+   display: inline !important;
+   line-height: 0.6 !important;
+}
 
 pre.lines-decorator {
   --lines-bgcolor: var(--hljs-bg);
