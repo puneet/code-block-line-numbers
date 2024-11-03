@@ -1,8 +1,8 @@
-pre.lines-decorator code.lines-decorator span.lines-line {
-   &::before {
-     box-sizing: content-box;
-    }
-}
+//pre.lines-decorator code.lines-decorator span.lines-line {
+//   &::before {
+//     box-sizing: content-box;
+//    }
+//}
 pre code {
   background: var(--primary-very-low) !important;
   font-size: #{$code-block_text_size}px;
