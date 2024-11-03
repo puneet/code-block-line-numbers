@@ -1,9 +1,12 @@
-pre.lines-decorator code.lines-decorator span.lines-line {
-  &::before {
-    box-sizing: content-box;
-  }
+//pre.lines-decorator code.lines-decorator span.lines-line {
+//   &::before {
+//     box-sizing: content-box;
+//    }
+//}
+pre code {
+  background: var(--primary-very-low) !important;
+  font-size: #{$code-block_text_size}px;
 }
-
 //--fix github onebox codeblocks
 pre.onebox code ol {
   display: inline !important;
@@ -16,17 +19,12 @@ pre.onebox code ol {
 
 pre.onebox code ol.lines li {
   list-style-type: none !important;
-  font-size: var(--font-down-1);
   align-content: center;
   padding-left: 1em;
 }
 
 pre.onebox code ol.lines li:before {
   display: inline;
-}
-
-span.lines-in-quote {
-  padding-left: 2em !important;
 }
 
 pre.lines-decorator {
@@ -84,38 +82,38 @@ code.lines-decorator {
     }
   }
   
-  &.lines-shadow {
-    background-image:
+  //&.lines-shadow {
+  //background-image:
       // First two covers that scroll with the content, hence appearing
       // in front of the shadows when no scrolling is possible. These
       // match the background color for the first 25%, and next a gradient
       // to full transparency (hence assuming the covers are 4 times the
       // width of the shadows).
-      linear-gradient(to right, var(--lines-bgcolor) 25%, transparent),
-      linear-gradient(to left, var(--lines-bgcolor) 25%, transparent),
+      //linear-gradient(to right, var(--lines-bgcolor) 25%, transparent),
+      //linear-gradient(to left, var(--lines-bgcolor) 25%, transparent),
       // And behind that two shadows at fixed positions, to indicate
       // scrollable, hidden content if not covered.
-      linear-gradient(to right, var(--lines-shadow-color), transparent),
-      linear-gradient(to left, var(--lines-shadow-color), transparent);
+      //linear-gradient(to right, var(--lines-shadow-color), transparent),
+      //linear-gradient(to left, var(--lines-shadow-color), transparent);
       // Or:
       // radial-gradient(farthest-side at 0px 50%, var(--lines-shadow-color), transparent),
       // radial-gradient(farthest-side at 100% 50%, var(--lines-shadow-color), transparent);
-    background-size:
+    //background-size:
       // Set the cover to 4 times the width of the actual shadow, to match
       // the 25% stop in the gradient of the cover
-      calc(4 * var(--lines-shadow-width)) 100%,
-      calc(4 * var(--lines-shadow-width)) 100%,
-      var(--lines-shadow-width) 100%,
-      var(--lines-shadow-width) 100%;
-    --shadow-left: 0;
-    &.lines-number:not(.lines-count-1):not(.lines-in-quote) {
+      //calc(4 * var(--lines-shadow-width)) 100%,
+      //calc(4 * var(--lines-shadow-width)) 100%,
+      //var(--lines-shadow-width) 100%,
+      //var(--lines-shadow-width) 100%;
+    //--shadow-left: 0;
+    //&.lines-number:not(.lines-count-1):not(.lines-in-quote) {
       // If line numbers are visible, we need to move the shadow
-      --shadow-left: calc(var(--lines-number-width) + var(--lines-number-padding-to-right-border));
-    }
-    background-position: var(--shadow-left) center, right center, var(--shadow-left) center, right center;
-    background-attachment: local, local, scroll, scroll;
-    background-repeat: no-repeat;
-  }
+     // --shadow-left: calc(var(--lines-number-width) + var(--lines-number-padding-to-right-border));
+    //}
+    //background-position: var(--shadow-left) center, right center, var(--shadow-left) center, right center;
+    //background-attachment: local, local, scroll, scroll;
+    //background-repeat: no-repeat;
+  //}
   
   &.lines-number:not(.lines-count-1):not(.lines-in-quote) {
     padding-left: 0;
@@ -135,8 +133,13 @@ code.lines-decorator {
       color: var(--primary-medium);
      // background-color: var(--lines-bgcolor);
     }
+    
     span.lines-in-quote {
-    border-right: 0px !important;
+      padding-left: 2em !important;
+      border-right: 0px !important;
+    }
+    span.lines-count-1 {
+      margin-left: .3em;
     }
   }
 }

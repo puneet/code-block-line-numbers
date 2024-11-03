@@ -1,0 +1,21 @@
+code-block_header_title:
+  type: string
+  default: "CODE"
+  description:
+    en: "Title text to show in header bar of code blocks.  Leave blank for none."
+    
+code-block_text_size:
+  type: enum
+  default: ""
+  choices:
+    - 12
+    - 13
+    - 14
+    - 15
+    - 16
+    - 17
+    - 18
+    - 19
+    - 20
+  description: 
+    en: "Code block text size in px. Leave blank to use current default."
