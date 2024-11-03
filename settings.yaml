@@ -8,7 +8,14 @@ code-block_text_size:
   type: enum
   default: ""
   choices:
-   - "var(--font-down-1)"
-   - "var(--font-up-1)"
+    - 12
+    - 13
+    - 14
+    - 15
+    - 16
+    - 17
+    - 18
+    - 19
+    - 20
    description:
      en: "Set code block relative font sizing. Does not affect inline pre-formatted code."
