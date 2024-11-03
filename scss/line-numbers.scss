@@ -3,7 +3,9 @@ pre.lines-decorator code.lines-decorator span.lines-line {
     box-sizing: content-box;
   }
 }
-
+pre code {
+  background: var(--primary-very-low) !important;
+}
 //--fix github onebox codeblocks
 pre.onebox code ol {
   display: inline !important;
