@@ -22,6 +22,7 @@ pre.lines-decorator {
 
 code.lines-decorator {
   padding: 1.5em;
+  font-family: var(--d-font-family--monospace);
 
   &.lines-wrap {
     white-space: pre-wrap;
