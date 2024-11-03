@@ -134,5 +134,8 @@ code.lines-decorator {
       color: var(--primary-medium);
      // background-color: var(--lines-bgcolor);
     }
+    span.lines-in-quote::before {
+    border-right: 0px !important;
+    }
   }
 }
