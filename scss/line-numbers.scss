@@ -11,6 +11,10 @@ pre.onebox code ol {
    line-height: 0.6 !important;
 }
 
+.lines-in-quote {
+  padding: 0 0 0 0;
+}
+
 pre.lines-decorator {
   --lines-bgcolor: var(--hljs-bg);
   --lines-number-width: 2em;
