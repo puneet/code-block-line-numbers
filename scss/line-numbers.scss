@@ -4,11 +4,29 @@ pre.lines-decorator code.lines-decorator span.lines-line {
   }
 }
 
+//--fix github onebox codeblocks
 pre.onebox code ol {
-    line-height: 1em;
-      .lines {
-        margin: -30px;
-  }
+  display: inline !important;
+  line-height: 0.6 !important;
+   //font-size: var(--font-down-1) !important;
+}
+//pre.onebox code ol.lines li:before {
+//   display: none;
+//}
+
+pre.onebox code ol.lines li {
+  list-style-type: none !important;
+  font-size: var(--font-down-1);
+  align-content: center;
+  padding-left: 1em;
+}
+
+pre.onebox code ol.lines li:before {
+  display: inline;
+}
+
+span.lines-in-quote {
+  padding-left: 2em !important;
 }
 
 pre.lines-decorator {
@@ -37,6 +55,7 @@ code.lines-decorator {
         display: inline-block;
         position: relative;
         padding-left: 3em;
+        //font-size: var(--font-down-1) !important;
       }
     }
   }
@@ -64,7 +83,7 @@ code.lines-decorator {
       left: 0;
     }
   }
-
+  
   &.lines-shadow {
     background-image:
       // First two covers that scroll with the content, hence appearing
@@ -81,7 +100,6 @@ code.lines-decorator {
       // Or:
       // radial-gradient(farthest-side at 0px 50%, var(--lines-shadow-color), transparent),
       // radial-gradient(farthest-side at 100% 50%, var(--lines-shadow-color), transparent);
-
     background-size:
       // Set the cover to 4 times the width of the actual shadow, to match
       // the 25% stop in the gradient of the cover
@@ -89,20 +107,16 @@ code.lines-decorator {
       calc(4 * var(--lines-shadow-width)) 100%,
       var(--lines-shadow-width) 100%,
       var(--lines-shadow-width) 100%;
-
     --shadow-left: 0;
-
     &.lines-number:not(.lines-count-1):not(.lines-in-quote) {
       // If line numbers are visible, we need to move the shadow
       --shadow-left: calc(var(--lines-number-width) + var(--lines-number-padding-to-right-border));
     }
-
     background-position: var(--shadow-left) center, right center, var(--shadow-left) center, right center;
-
     background-attachment: local, local, scroll, scroll;
     background-repeat: no-repeat;
   }
-
+  
   &.lines-number:not(.lines-count-1):not(.lines-in-quote) {
     padding-left: 0;
     counter-reset: line-numbering;
@@ -117,9 +131,12 @@ code.lines-decorator {
       margin-right: .5em;
       height: 100%;
       text-align: right;
-      font-family: var(--font-family);
+      font-family: var(--d-font-family--monospace);
       color: var(--primary-medium);
      // background-color: var(--lines-bgcolor);
+    }
+    span.lines-in-quote {
+    border-right: 0px !important;
     }
   }
 }
