@@ -10,6 +10,15 @@ pre.onebox code ol {
    line-height: 0.6 !important;
    //font-size: var(--font-down-1) !important;
 }
+pre.onebox code ol.lines li:before {
+   display: none;
+}
+
+pre.onebox code ol.lines li {
+    list-style-type: ;
+    font-size: var(--font-down-1);
+    align-content: center;
+}
 
 span.lines-in-quote {
   padding-left: 2em !important;
