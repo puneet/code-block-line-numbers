@@ -1,49 +1,37 @@
 .codeblock-buttons {
-    box-shadow: 0px 0px 10px rgba(0,0,0,.4);
+  display: flex;
+  flex-direction: column;
+  padding: 1em 0;
+  border-radius: 0.5em;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  &:before {
+    content: "#{$code-block-header-title}";
+    font-family: var(--d-font-family--monospace);
+    font-weight: bold;
+    padding: 0.25em;
+    background-color: var(--hljs-bg);
+    color: var(--primary-very-high);
+    order: 1;
+    text-align: center;
+    margin-top: -1em;
+  }
+  .codeblock-button-wrapper {
     display: flex;
-    flex-direction: column;
-    border-radius: 7px 7px 0 0;
-    &:before{
-        content:'#{$code-block_header_title}';
-        display: grid;
-        justify-content: center;
-        font-family: var(--d-font-family--monospace);
-        font-weight: bold;
-        padding: 5px;
-        background-color: var(--primary-very-low);
-        color: var(--primary-very-high);
-        order:1;
+    position: absolute;
+    top: 0.25em;
+    right: 0.25em !important;
+    .btn {
+      opacity: 1;
+      visibility: visible;
+      border-radius: 0.5em;
     }
-    & .btn.nohighlight{
-            padding: .7em;
-            float: right;
-            &.copy-cmd{
-                position: absolute;
-                right: 0px;
-            }
-            &.fullscreen-cmd{
-                position: absolute;
-                right: 3.2em;
-            }
-            &.copy-cmd:not(.action-complete), &.fullscreen-cmd:not(.action-complete){
-                opacity: 1;
-                visibility: visible;
-            }
-    }
-    & code{
-        order:2;
-    }
-}
-code{
-    &.lines-decorator{
-        padding: 0px;
-        //&.lines-shadow{
-        //    background-image: linear-gradient(to right, var(--github) 25%, transparent), linear-gradient(to left, var(--github) 25%, transparent), linear-gradient(to right, var(--github), transparent), linear-gradient(to left, var(--github), transparent);
-        //}
-        //&.lines-number:not(.lines-count-1):not(.lines-in-quote) span.lines-line::before{
-        //    background-color: #263238;
-        //    color: rgba(233, 237, 237, 1);
-        //}
-    }
+  }
     
+  code {
+    order: 2; 
+    &.lines-decorator{
+      padding: 0px;
+    }
+  }
 }
