@@ -25,9 +25,9 @@
     right: 0.25em !important;
     .copy-cmd,
     .fullscreen-cmd {
-      opacity: 1;
-      visibility: visible;
-      border-radius: 0.5em;
+      opacity: 1 !important;
+      visibility: visible !important;
+      border-radius: 0.5em !important;
     }
   }
     
