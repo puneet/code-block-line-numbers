@@ -19,6 +19,7 @@
   .codeblock-button-wrapper {
     display: flex;
     position: absolute;
+    gap: 0.25em;
     top: 0.25em;
     right: 0.25em !important;
     .copy-cmd:not(.action-complete),
