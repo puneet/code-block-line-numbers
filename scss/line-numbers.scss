@@ -27,6 +27,7 @@ code.lines-decorator {
 
     &::before {
       @include sticky;
+      left: 0;
       background: var(--hljs-bg);
     }
   }
