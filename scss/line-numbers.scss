@@ -1,66 +1,33 @@
-//pre.lines-decorator code.lines-decorator span.lines-line {
-//   &::before {
-//     box-sizing: content-box;
-//    }
-//}
-pre code {
-  background: var(--primary-very-low) !important;
-  font-size: #{$code-block_text_size}px;
-}
-//--fix github onebox codeblocks
+pre {
+  code {
+    background: var(--primary-very-low) !important;
+    font-size: #{$code-block-text-size}px;
+  }
+  //--fix github onebox codeblocks
 
-pre.lines-decorator {
-  --lines-bgcolor: var(--hljs-bg);
-  --lines-number-width: 2em;
-  --lines-number-padding-to-right-border: .6em;
-  //--lines-shadow-width: .8em;
-  //--lines-shadow-color: rgba(0, 0, 0, .15);
-  // No padding for outer PRE:
-  // - scrollbars not covering CODE but close to outermost edges
-  // - text close to the edges when there is hidden content
-  // - likewise for the shadows
-  // #f5f5f5 in `code.less`
-  padding: 0;
-  background-color: var(--lines-bgcolor);
+  &.lines-decorator {
+    --lines-bgcolor: var(--hljs-bg);
+    --lines-number-width: 2em;
+    --lines-number-padding-to-right-border: .6em;
+
+    background-color: var(--lines-bgcolor);
+  }
 }
 
 code.lines-decorator {
-  padding: 1.5em;
-
   &.lines-wrap {
-    white-space: pre-wrap;
-
-    &:not(.lines-count-1) {
-      span.lines-line {
-        display: inline-block;
-        position: relative;
-        padding-left: 3em;
-        //font-size: var(--font-down-1) !important;
-      }
-    }
-  }
-
-  &.lines-scroll {
     white-space: pre;
-
-    span.lines-line {
-      padding-right: 1.5em;
-
-      &::before {
-        position: sticky;
-        left: 0;
-      }
-    }
   }
 
-  &.lines-wrap span.lines-line {
+  span.lines-line {
     // Minimum height to get border and background for empty lines (Firefox
     // only needs this for the ::before, but Chrome also for the span)
     min-height: 1.5em;
+    padding-right: 1.5em;
 
     &::before {
-      position: absolute;
-      left: 0;
+      @include sticky;
+      background: var(--hljs-bg);
     }
   }
   
