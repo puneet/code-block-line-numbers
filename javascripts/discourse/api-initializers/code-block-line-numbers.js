@@ -15,7 +15,7 @@ export default apiInitializer("1.14.0", (api) => {
         elem.classList.add(`lines-count-${count}`, ...classes, ...quote);
         const lineClass = ['lines-line', ...quote].join(' ');
   
-    // trim to hide trailing blank lines
+        // trim to hide trailing blank lines
         elem.innerHTML = elem.innerHTML.trim().replace(/^(.*)$/mg, `<span class="${lineClass}">$1</span>`);
       });
     } catch (e) {
