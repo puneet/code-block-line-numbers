@@ -1,7 +1,7 @@
 code {
   font-size: #{$code-block-text-size}px;
   
-  .lines-decorator {
+  &.lines-decorator {
     background-color: var(--hljs-bg);
     
     &.lines-wrap {
