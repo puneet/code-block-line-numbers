@@ -31,15 +31,14 @@ code.lines-decorator {
       background: var(--hljs-bg);
     }
   }
-}
   
-aside[data-expanded="true"] {
-  code.lines-decorator {
-    &.lines-number:not(.lines-count-1):not(.lines-in-quote) {
-      padding-left: 0;
-      counter-reset: line-numbering;
+  &.lines-number:not(.lines-count-1):not(.lines-in-quote),
+  blockquote .expanded-quote & {
+    padding-left: 0;
+    counter-reset: line-numbering;
 
-      span.lines-line::before {
+    span.lines-line {
+      &::before {
         display: inline-block;
         content: counter(line-numbering);
         counter-increment: line-numbering;
@@ -52,14 +51,15 @@ aside[data-expanded="true"] {
         font-family: var(--d-font-family--monospace);
         color: var(--primary-medium);
       }
+    }
     
-      span.lines-in-quote {
-        padding-left: 2em !important;
-        border-right: 0px !important;
-      }
-      span.lines-count-1 {
-        margin-left: .3em;
-      }
+    span.lines-in-quote {
+      padding-left: 2em !important;
+      border-right: 0px !important;
+    }
+    
+    span.lines-count-1 {
+      margin-left: .3em;
     }
   }
 }
