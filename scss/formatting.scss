@@ -42,7 +42,7 @@
 .d-modal {
   &.fullscreen-code-modal {
     code.lines-decorator {
-      padding: 1rem;
+      padding-left: 1rem !important;
     }
   }
 }
