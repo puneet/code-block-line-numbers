@@ -1,4 +1,4 @@
-.codeblock-buttons {
+pre.lines-decorator {
   display: flex;
   flex-direction: column;
   padding: 1em 0;
@@ -13,9 +13,9 @@
     padding: 0.25em;
     background-color: var(--hljs-bg);
     color: var(--primary-very-high);
-    order: 1;
     text-align: center;
     margin-top: -1em;
+    order: 1;
   }
   .codeblock-button-wrapper {
     display: flex;
@@ -31,11 +31,9 @@
     }
   }
     
-  code {
-    order: 2; 
-    &.lines-decorator {
-      padding: 0 1em;
-    }
+  code.lines-decorator {
+    padding: 0 1em;
+    order: 2;
   }
 }
 
