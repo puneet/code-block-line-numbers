@@ -1,65 +1,55 @@
-pre {
-  code {
-    background: var(--primary-very-low) !important;
-    font-size: #{$code-block-text-size}px;
-  }
-  //--fix github onebox codeblocks
-
-  &.lines-decorator {
-    --lines-bgcolor: var(--hljs-bg);
-    --lines-number-width: 2em;
-    --lines-number-padding-to-right-border: .6em;
-
-    background-color: var(--lines-bgcolor);
-  }
-}
-
-code.lines-decorator {
-  &.lines-wrap {
-    white-space: pre;
-  }
-
-  span.lines-line {
-    // Minimum height to get border and background for empty lines (Firefox
-    // only needs this for the ::before, but Chrome also for the span)
-    min-height: 1.5em;
-    padding-right: 1.5em;
-
-    &::before {
-      @include sticky;
-      left: 0;
-      background: var(--hljs-bg);
-    }
-  }
+code {
+  font-size: #{$code-block-text-size}px;
   
-  &.lines-number:not(.lines-count-1):not(.lines-in-quote),
-  blockquote .expanded-quote & {
-    padding-left: 0;
-    counter-reset: line-numbering;
-
+  .lines-decorator {
+    background-color: var(--hljs-bg);
+    
+    &.lines-wrap {
+      white-space: pre;
+    }
+  
     span.lines-line {
+      // Minimum height to get border and background for empty lines (Firefox
+      // only needs this for the ::before, but Chrome also for the span)
+      min-height: 1.5em;
+      padding-right: 1.5em;
+  
       &::before {
-        display: inline-block;
-        content: counter(line-numbering);
-        counter-increment: line-numbering;
-        border-right: 1px solid #ccc;
-        width: var(--lines-number-width);
-        padding-right: var(--lines-number-padding-to-right-border);
-        margin-right: .5em;
-        height: 100%;
-        text-align: right;
-        font-family: var(--d-font-family--monospace);
-        color: var(--primary-medium);
+        @include sticky;
+        left: 0;
+        background: var(--hljs-bg);
       }
     }
     
-    span.lines-in-quote {
-      padding-left: 2em !important;
-      border-right: 0px !important;
-    }
-    
-    span.lines-count-1 {
-      margin-left: .3em;
+    &.lines-number:not(.lines-count-1):not(.lines-in-quote),
+    blockquote .expanded-quote & {
+      padding-left: 0;
+      counter-reset: line-numbering;
+  
+      span.lines-line {
+        &::before {
+          display: inline-block;
+          content: counter(line-numbering);
+          counter-increment: line-numbering;
+          border-right: 1px solid var(--primary-300);
+          width: 2em;
+          padding-right: 0.6em;
+          margin-right: .5em;
+          height: 100%;
+          text-align: right;
+          font-family: var(--d-font-family--monospace);
+          color: var(--primary-medium);
+        }
+      }
+      
+      span.lines-in-quote {
+        padding-left: 2em !important;
+        border-right: 0px !important;
+      }
+      
+      span.lines-count-1 {
+        margin-left: .3em;
+      }
     }
   }
 }
