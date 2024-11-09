@@ -44,6 +44,6 @@ pre.lines-decorator {
     }
   }
 }
-.cooked pre[data-code-wrap=mermaid]:before {
+pre[data-code-wrap="mermaid"]:before {
     display: none;
 }
