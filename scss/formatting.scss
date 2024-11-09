@@ -4,6 +4,7 @@
   padding: 1em 0;
   border-radius: 0.5em;
   border: 1px solid var(--primary-medium);
+  background: var(--hljs-bg);
   overflow: hidden;
   &:before {
     content: "#{$code-block-header-title}";
