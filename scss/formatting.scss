@@ -21,7 +21,8 @@
     position: absolute;
     top: 0.25em;
     right: 0.25em !important;
-    .btn {
+    .copy-cmd:not(.action-complete),
+    .fullscreen-cmd:not(.action-complete) {
       opacity: 1;
       visibility: visible;
       border-radius: 0.5em;
