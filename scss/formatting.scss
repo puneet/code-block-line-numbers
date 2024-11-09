@@ -1,4 +1,5 @@
-pre.lines-decorator {
+pre.lines-decorator,
+.codeblock-buttons {
   display: flex;
   flex-direction: column;
   padding: 1em 0;
@@ -7,9 +8,10 @@ pre.lines-decorator {
   background: var(--hljs-bg);
   overflow: hidden;
   &:before {
-    content: "#{$code-block-header-title}";
+    content: "#{$code-block-header-title} " attr(data-code-wrap);
     font-family: var(--d-font-family--monospace);
     font-weight: bold;
+    text-transform: uppercase;
     padding: 0.25em;
     background-color: var(--hljs-bg);
     color: var(--primary-very-high);
@@ -44,6 +46,8 @@ pre.lines-decorator {
     }
   }
 }
+
+// Hide header title on mermaid diagram
 pre[data-code-wrap="mermaid"]:before {
-    display: none;
+  display: none;
 }
