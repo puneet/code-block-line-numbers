@@ -27,15 +27,16 @@ code {
   
       span.lines-line {
         &::before {
-          display: inline-block;
           content: counter(line-numbering);
           counter-increment: line-numbering;
-          border-right: 1px solid var(--primary-300);
-          width: 2em;
-          padding-right: 0.6em;
-          margin-right: .5em;
+          display: inline-flex;
+          justify-content: flex-end;
+          width: 4ch;
           height: 100%;
-          text-align: right;
+          padding-left: 0.6em;
+          padding-right: 0.6em;
+          margin-right: 0.5em;
+          border-right: 1px solid var(--primary-300);
           font-family: var(--d-font-family--monospace);
           color: var(--primary-medium);
         }
@@ -43,11 +44,11 @@ code {
       
       span.lines-in-quote {
         padding-left: 2em !important;
-        border-right: 0px !important;
+        border-right: none !important;
       }
       
       span.lines-count-1 {
-        margin-left: .3em;
+        margin-left: 0.3em;
       }
     }
   }

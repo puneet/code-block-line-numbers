@@ -7,7 +7,7 @@ pre.lines-decorator,
   border: 1px solid var(--primary-medium);
   background: var(--hljs-bg);
   overflow: hidden;
-  &:before {
+  &::before {
     content: "#{$code-block-header-title} " attr(data-code-wrap);
     font-family: var(--d-font-family--monospace);
     font-weight: bold;
