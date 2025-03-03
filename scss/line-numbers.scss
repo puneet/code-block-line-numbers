@@ -14,7 +14,7 @@ code {
       min-height: 1.5em;
   
       &::before {
-        @include sticky;
+        position: sticky;
         left: 0;
         background: var(--hljs-bg);
       }
